@@ -18,7 +18,8 @@ class LBCNN(Module):
 		    temp[index[i]] =0;
 		self.LBCNN.weight.copy = temp.view(self.nOutputPlane,self.nInputPlane,self.kW,self.kW)
 		self.LBCNN.weight = Parameter(self.LBCNN.weight.copy)
-		print(self.LBCNN.weight)
+		self.LBCNN.weight.requires_grad=True
+		#print(self.LBCNN.weight)
 		
     def forward(self, input):
          return self.LBCNN.forward(input)
