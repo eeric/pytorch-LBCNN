@@ -29,6 +29,6 @@ http://blog.csdn.net/yyqq7226741/article/details/78308036
 
 5.Thanks
 
-In LBCNN.py,21 lined appended by Lynkzhang's testing
+In 21th line of LBCNN.py, appended by Lynkzhang's testing
 
 @Lynkzhang, https://github.com/Lynkzhang
