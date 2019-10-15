@@ -30,5 +30,6 @@ http://blog.csdn.net/yyqq7226741/article/details/78308036
 5.Thanks
 
 In 11th line of LBCNN.py, taked 'False' to 'True', by Lynkzhang's testing
+the reason that the new convolution layer needs to update the gradient
 
 @Lynkzhang, https://github.com/Lynkzhang
