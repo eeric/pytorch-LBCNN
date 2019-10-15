@@ -8,7 +8,7 @@ class LBCNN(Module):
 		self.nOutputPlane = out_channels
 		self.kW = kernel_size
 		self.LBCNN = Conv2d(in_channels, out_channels, kernel_size, stride, padding, dilation, groups, False)
-		self.LBCNN.weight.requires_grad=True
+		self.LBCNN.weight.requires_grad=False
          #init weight
 		numElements = self.nInputPlane*self.nOutputPlane*self.kW*self.kW
 		index = torch.randperm(numElements)
@@ -18,7 +18,6 @@ class LBCNN(Module):
 		    temp[index[i]] =0;
 		self.LBCNN.weight.copy = temp.view(self.nOutputPlane,self.nInputPlane,self.kW,self.kW)
 		self.LBCNN.weight = Parameter(self.LBCNN.weight.copy)
-		#self.LBCNN.weight.requires_grad=True
 		
     def forward(self, input):
          return self.LBCNN.forward(input)
